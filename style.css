@@ -76,17 +76,17 @@ canvas{
 }
 
 .text:last-child span{
-    background: linear-gradient(#29c040, #32ed4e);
+    background: linear-gradient(#272ebb, #3248ed);
 }
 
 .text:last-child::before{
-    background: #11a728;
+    background: #3248ed;
 }
 
 h2{
     position: absolute;
     bottom: 50px;
-    color: rgba(255, 255, 255, 0.179);
+    color: rgba(255, 255, 255, 0.284);
     font-size: 2em;
     transition: 0.5s;
     cursor: pointer;
@@ -103,8 +103,8 @@ h2:after{
 }
 
 h2.active:after{
-    color: #32ed4e;
-    text-shadow: 0 0 20px #32ed4e, 0 0 50px #32ed4e;
+    color: #272ebb;
+    text-shadow: 0 0 20px #272ebb, 0 0 50px #272ebb;
 }
 
 .glowing{
