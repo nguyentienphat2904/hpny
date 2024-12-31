@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ body{
     background-color: black;
 }
 
-canvas{
+canvas {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,7 +23,7 @@ canvas{
     z-index: -1;
 }
 
-.container{
+.container {
     position: absolute;
     display: flex;
     transform-style: preserve-3d;
@@ -31,7 +31,7 @@ canvas{
     transform: rotateY(30deg) rotateX(10deg);
 }
 
-.text{
+.text {
     position: relative;
     width: 100px;
     height: 100px;
@@ -40,15 +40,15 @@ canvas{
     transition-delay: calc(0.25s * var(--j));
 }
 
-.container.newyear .text{
+.container.newyear .text {
     transform: rotateX(calc(-360deg * 1));
 }
 
-.container.newyear .text:last-child{
+.container.newyear .text:last-child {
     transform: rotateX(calc(-630deg * 1));
 }
 
-.text span{
+.text span {
     position: absolute;
     top: 0;
     left: 0;
@@ -65,7 +65,7 @@ canvas{
     transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
 }
 
-.text::before{
+.text::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -75,15 +75,15 @@ canvas{
     transform: rotateY(90deg) translateX(-50px);
 }
 
-.text:last-child span{
+.text:last-child span {
     background: linear-gradient(#272ebb, #3248ed);
 }
 
-.text:last-child::before{
+.text:last-child::before {
     background: #3248ed;
 }
 
-h2{
+h2 {
     position: absolute;
     bottom: 50px;
     color: rgba(255, 255, 255, 0.284);
@@ -92,22 +92,22 @@ h2{
     cursor: pointer;
 }
 
-h2.active{
+h2.active {
     color: white;
     text-shadow: 0 0 20px white, 0 0 50px white;
 }
 
-h2:after{
-    content: ' 2024';
+h2:after {
+    content: ' 2025';
     transition: 0.5s;
 }
 
-h2.active:after{
+h2.active:after {
     color: #272ebb;
     text-shadow: 0 0 20px #272ebb, 0 0 50px #272ebb;
 }
 
-.glowing{
+.glowing {
     position: relative;
     min-width: 750px;
     height: 750px;
@@ -116,7 +116,7 @@ h2.active:after{
     transform-origin: right;
 }
 
-.glowing span{
+.glowing span {
     position: absolute;
     top: calc(80px * var(--i));
     left: calc(80px * var(--i));
@@ -126,7 +126,7 @@ h2.active:after{
     box-sizing: border-box;
 }
 
-.glowing span::before{
+.glowing span::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -137,59 +137,70 @@ h2.active:after{
     background-color: red;
 }
 
-.glowing span:nth-child(3n + 1){
+.glowing span:nth-child(3n + 1) {
     animation: animate 10s alternate infinite;
 }
 
-.glowing span:nth-child(3n + 2){
+.glowing span:nth-child(3n + 2) {
     animation: animate-reverse 13s alternate infinite;
 }
 
-.glowing span:nth-child(3n + 3){
+.glowing span:nth-child(3n + 3) {
     animation: animate-reverse 8s alternate infinite;
 }
 
-@keyframes animate{
-    0%{
+@keyframes animate {
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
 
-@keyframes animate-reverse{
-    0%{
+@keyframes animate-reverse {
+    0% {
         transform: rotate(360deg);
     }
-    100%{
+
+    100% {
         transform: rotate(0deg);
     }
 }
 
-.glowing span:nth-child(3n + 1)::before{
+.glowing span:nth-child(3n + 1)::before {
     background: rgba(134, 255, 0, 1);
     box-shadow: 0 0 20px rgba(134, 255, 0, 1),
-                0 0 40px rgba(134, 255, 0, 1),
-                0 0 60px rgba(134, 255, 0, 1),
-                0 0 80px rgba(134, 255, 0, 1),
-                0 0 0 4px rgba(134, 255, 0, 0.1);
+        0 0 40px rgba(134, 255, 0, 1),
+        0 0 60px rgba(134, 255, 0, 1),
+        0 0 80px rgba(134, 255, 0, 1),
+        0 0 0 4px rgba(134, 255, 0, 0.1);
 }
 
-.glowing span:nth-child(3n + 2)::before{
+.glowing span:nth-child(3n + 2)::before {
     background: rgba(255, 214, 0, 1);
     box-shadow: 0 0 20px rgba(255, 214, 0, 1),
-                0 0 40px rgba(255, 214, 0, 1),
-                0 0 60px rgba(255, 214, 0, 1),
-                0 0 80px rgba(255, 214, 0, 1),
-                0 0 0 4px rgba(255, 214, 0, 0.1);
+        0 0 40px rgba(255, 214, 0, 1),
+        0 0 60px rgba(255, 214, 0, 1),
+        0 0 80px rgba(255, 214, 0, 1),
+        0 0 0 4px rgba(255, 214, 0, 0.1);
 }
 
-.glowing span:nth-child(3n + 3)::before{
+.glowing span:nth-child(3n + 3)::before {
     background: rgba(0, 226, 255, 1);
     box-shadow: 0 0 20px rgba(0, 226, 255, 1),
-                0 0 40px rgba(0, 226, 255, 1),
-                0 0 60px rgba(0, 226, 255, 1),
-                0 0 80px rgba(0, 226, 255, 1),
-                0 0 0 4px rgba(0, 226, 055, 0.1);
+        0 0 40px rgba(0, 226, 255, 1),
+        0 0 60px rgba(0, 226, 255, 1),
+        0 0 80px rgba(0, 226, 255, 1),
+        0 0 0 4px rgba(0, 226, 055, 0.1);
+}
+
+h1 {
+    position: absolute;
+    bottom: 150px;
+    color: rgba(255, 255, 255);
+    font-size: 4em;
+    transition: 0.5s;
+    cursor: pointer;
 }
