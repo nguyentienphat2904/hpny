@@ -32,9 +32,9 @@ function checkNewYear() {
     }
 }
 
-// h2.onclick = function () {
-//     triggerNewYearEffect();
-// }
+h2.onclick = function () {
+    triggerNewYearEffect();
+}
 
 setInterval(checkNewYear, 1000);
 
